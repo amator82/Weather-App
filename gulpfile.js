@@ -26,6 +26,7 @@ import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js'
 import { svgSprive } from './gulp/tasks/svgSprive.js'
 import { zip } from './gulp/tasks/zip.js'
 import { ftp } from './gulp/tasks/ftp.js'
+import { deploy } from './gulp/tasks/deploy.js'
 
 //! Нвблюдатель за изменениями в файлах
 function watcher() {
@@ -50,6 +51,7 @@ const mainTasks = gulp.series(
 //! Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 const build = gulp.series(reset, mainTasks)
+const deployght = gulp.series(reset, mainTasks, deploy)
 const deployZIP = gulp.series(reset, mainTasks, zip)
 const deployFTP = gulp.series(reset, mainTasks, ftp)
 
@@ -58,6 +60,7 @@ export { dev }
 export { build }
 export { deployZIP }
 export { deployFTP }
+export { deployght }
 
 //! Выполнение сценариев по умолчанию
 gulp.task('default', dev)

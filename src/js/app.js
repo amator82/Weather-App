@@ -31,7 +31,7 @@ const fetchData = async () => {
         
         const result = await fetch(`${link}&query=${query}`)
         const data = await result.json()
-
+        console.log(data);
         const {
             current: {
                 feelslike: feelsLike,
