@@ -1,9 +1,6 @@
 @charset "UTF-8";
-
 /*Обнуление*/
-
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900);
-
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +10,8 @@
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -73,8 +72,7 @@ a:hover {
   text-decoration: none;
 }
 
-ul,
-li {
+ul, li {
   list-style: none;
 }
 
@@ -93,14 +91,12 @@ h6 {
 }
 
 /*--------------------*/
-
 body {
   font-family: "Rubik";
   background: #0a081f;
   color: #000;
   font-size: 14px;
 }
-
 body._lock {
   overflow: hidden;
 }
@@ -159,7 +155,6 @@ img {
   transition: transform 0.3s ease-in-out;
   z-index: 9;
 }
-
 .popup.active {
   transform: translateX(0);
 }
@@ -172,7 +167,6 @@ img {
   width: 22px;
   height: 22px;
 }
-
 .popup-close span {
   display: block;
   margin-top: 10px;
@@ -182,7 +176,6 @@ img {
   transform: rotate(45deg);
   position: relative;
 }
-
 .popup-close span:after {
   content: "";
   display: block;
@@ -204,7 +197,6 @@ img {
   padding: 0 15px;
   justify-content: space-between;
 }
-
 .form-group__input {
   border: none;
   border-bottom: 2px solid #eee;
@@ -215,15 +207,9 @@ img {
   width: 75%;
   padding: 5px;
 }
-
-.form-group__input::-moz-placeholder {
-  color: rgb(187, 187, 187);
-}
-
 .form-group__input::placeholder {
   color: rgb(187, 187, 187);
 }
-
 .form-group__submit {
   background: #000;
   color: #fff;
@@ -256,7 +242,6 @@ img {
   left: 0;
   z-index: 0;
 }
-
 .container:before.is-day::before {
   background: url("../img/figure2.svg") no-repeat center/cover;
 }
@@ -275,17 +260,13 @@ img {
 }
 
 .city {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
-
 .city__subtitle {
   font-size: 15px;
   line-height: 18px;
   color: #ffffff;
 }
-
 .city__title {
   background: #8781c5;
   border-radius: 8px;
@@ -296,11 +277,8 @@ img {
   padding: 1px 8px;
   margin-top: 6px;
   cursor: pointer;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
-
 .city__info {
   display: flex;
   justify-content: space-between;
@@ -309,13 +287,11 @@ img {
 .info-city {
   margin-top: 28px;
 }
-
 .info-city__subtitle {
   font-size: 13px;
   line-height: 15px;
   color: #ffffff;
 }
-
 .info-city__title {
   font-weight: 500;
   font-size: 53px;
@@ -340,19 +316,16 @@ img {
   display: flex;
   align-items: center;
 }
-
 .property__icon {
   width: 30px;
   margin-right: 6px;
 }
-
 .info-property__value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #000000;
 }
-
 .info-property__description {
   font-weight: 300;
   font-size: 12px;
