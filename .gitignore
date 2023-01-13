@@ -1,0 +1,6 @@
+/node_modules
+/dist
+version.json
+/.vscode
+*.zip
+apikey.js
